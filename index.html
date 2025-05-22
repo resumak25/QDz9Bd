@@ -1,155 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Resume - <Name> </title>
+<title>Data Quality Improvement - Preview</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box;}
-
-p {text-align: justify;}
-
-body {font-family: Calibri,sans-serif; margin: 0;}
-
-._column {  float: left; width: 33%;  padding: 20px 8px;  display:block  ;}
-
-/* Header/logo Title */
-._header {  padding: 3px;  text-align: center;  background: black;  color: white;}
-
-._column_head {  margin-top: -10px;  padding: 8px 10px;  text-align: center;  background: darkgray;
-  color: white;  border-top-left-radius: 20px;  border-top-right-radius: 20px;  display:block  ;}
-
-._section_head {  margin-top: 0px;  padding: 8px 10px;  text-align: center;  background: darkgoldenrod;
-  color: white;  border: 2px solid darkgoldenrod;  border-top-left-radius: 10px;  border-top-right-radius: 10px;}
-
-._content_head {  margin-top: 0px;  padding: 8px 10px;  text-align: justify;  background: navy;
-  color: white;  border-top-left-radius: 10px;  border-top-right-radius: 10px;}
-
-._content {  padding: 12px 18px;  text-align: justify;  color: black;}
-
-._content_show{  margin-top: -20px;  margin-bottom: 10px;  display:block  ;  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;  border: .5px solid silver;  padding: 5px 10px;  border-style: none solid solid solid;}
-
-._content_hide{  margin-top: -20px;  display:none;  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;  border: .5px solid silver;  padding: 12px 8px;  border-style: none solid solid solid;}
-
-._content_tech {  color:blue;  font-style: italic;  text-indent: 5px;}
-
-p {  text-indent: 30px;  margin-top: 5px;}
-._row {    display: flex;  flex-wrap: wrap;}
-._img {  background-color: #aaa;  width: 100%;  padding: 20px;}
-._footer {  padding: 5px;  text-align: center;  background: silver;}
-
-/* Adjust Columns based on Device Width */
-@media screen and (max-width: 100px) {  .row {       flex-direction: column;  }}
-@media screen and (max-width: 4000px) {  ._column {    width: 33%;  }}
-@media screen and (max-width: 1300px) {  ._column {    width: 50%;  }}
-@media screen and (max-width: 1000px) {  ._column {    width: 100%;  }}
-
-.active:hover, ._column_head:hover, ._section_head:hover {  color: yellow;}
-
-</style>
 
 </head>
 <body>
 
-<!-- Note -->
-<!-- <div style="background:yellow;padding:5px">
-  <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
-</div> -->
-
-<!-- Header -->
-<div class="_header">
-  <h2>	<a id="full_name" style="font-variant: small-caps;font-size:24px;color:orange"></a>   </h2>
-		<a id="caption" style="text-align:center;color:s"></a>
-</div>
-
-<div class="_row">
-  <div class="_column">
-    <h3 class="_column_head">Experience</h3> 
-	<div class="_content_show">
-		<h4 class="_content_head">Summary</h4>
-		<div class="_content_show" id="summary_lines"> </div>
-
-		<h4 class="_content_head">Roles</h4>
-		<div class="_content_show" id="Roles">   </div>
-	
-    </div>
-  </div>
-
-  <div class="_column">
-    <h3 class="_column_head" >Skills</h3>
-    <div class="_content_show" id="keywords">
-
-      <h4 class="_content_head" style="background: maroon;">Examples of work</h4>
-      <div class="_content_show" id="examples">      </div>
-
-      <h4 class="_content_head"style="background: maroon;" >Keywords</h4>
-      <div class="_content_show" id="keywords">      </div>
-    </div>
-
-  </div>
-
-  <div class="_column">
-    <h3 class="_column_head" >Recent Work</h3>
-    <div class="_content_show">
-
-      <h4 class="_content_head">Summary</h4>
-      <div class="_content_show">        </div>
-
-        <h4 class="_content_head"> Client 1 &nbsp;|&nbsp; Nov'24-Mar'25 </h4>
-        <div class="_content_show">   <p class="_content_tech">      </div>
-
-        <h4 class="_content_head">Client 2 &nbsp;|&nbsp; May'23-Nov'24</h4>
-        <div class="_content_show">
-          <p class="_content_tech"> </p>
-        </div>
-    </div>
-  </div>
-</div>
-
-<!-- Footer -->
-<div class="_footer" id="footer">  <p>&copy; 2025 Qrithi, Inc.</p></div>
-
-<script>
-  create_click_watch("_column_head");
-  create_click_watch("_section_head");
-  create_click_watch("_content_head");
-
-function create_click_watch(className)
-  {
-  var headings = document.getElementsByClassName(className);
-  var i;
-  for (i = 0; i < headings.length; i++) 
-    {
-    headings[i].addEventListener("click",
-      function() {
-        console.log(this.innerHTML);
-        var next_Div = this.nextElementSibling;
-        console.log(next_Div.style.display);
-        if (next_Div.style.display === "block") 
-          {
-          next_Div.style.display = "none";
-          }
-        else 
-          {
-          next_Div.style.display = "block";
-          }
-        }
-        );
-    }
-  }
+<img width="100%" xmlns="http://www.w3.org/2000/svg" src="file:///home/ark/Documents/learn/250520-git/QDz9Bd/QDz9Bd-.svg" />
 
 
-</script>  
-<script>  
-let JSON_String='{  "Header":   {  "Full_Name":"User_Name"  ,"Caption":"Data Quality Analysis, Data Analysis, Automation using SQL (database and ETL ecosystem agnostic)"  ,"Email":"d@a.b" }  } ';
-const JSON_Obj                                 = JSON.parse(JSON_String);
-document.getElementById("full_name").innerHTML = JSON_Obj.Header.Full_Name ;
-document.getElementById("caption").innerHTML   = JSON_Obj.Header.Caption ;
-
-
-</script>  
 </body>
 </html>
 
