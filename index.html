@@ -19,25 +19,55 @@ body {margin:0;}
 	background: black;
 	color: black;
 	}
-.main {
-	padding: 0px;
-	margin-top: 50px;
-	  
-	}
+._main {  
+  display: flex;
+  flex-wrap: wrap;
+}
+._tile {
+  float: left;
+  width: 33%;
+  padding: 20px 8px;
+  display:block  ;
+  margin-top: 50px;
+}
+
+/* Adjust Columns based on Device Width */
+@media screen and (max-width: 100px) {
+  ._main {   
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 4000px) {
+  ._tile {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  ._tile {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  ._tile {
+    width: 100%;
+  }
+}
+
 </style>
 </head>
 <body onload="open_aio()" style="background-color: black;"">
 <div class="navbar">
-  <a onClick="open_aio()">
-	<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F19E39"><path d="M120-440v-320q0-33 23.5-56.5T200-840h240v400H120Zm240-80Zm160-320h240q33 0 56.5 23.5T840-760v160H520v-240Zm0 720v-400h320v320q0 33-23.5 56.5T760-120H520ZM120-360h320v240H200q-33 0-56.5-23.5T120-200v-160Zm240 80Zm240-400Zm0 240Zm-400-80h160v-240H200v240Zm400-160h160v-80H600v80Zm0 240v240h160v-240H600ZM200-280v80h160v-80H200Z"/></svg>
-  </a>
-  <a href="mailto:improve.existing334@passfwd.com?subject=Re: Improve Data Quality &body=Contacting to schedule discussion on improving data quality - including topics previewed at https://resumak25.github.io/QDz9Bd">
+
+	<a onClick="open_aio()">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F19E39"><path d="M120-440v-320q0-33 23.5-56.5T200-840h240v400H120Zm240-80Zm160-320h240q33 0 56.5 23.5T840-760v160H520v-240Zm0 720v-400h320v320q0 33-23.5 56.5T760-120H520ZM120-360h320v240H200q-33 0-56.5-23.5T120-200v-160Zm240 80Zm240-400Zm0 240Zm-400-80h160v-240H200v240Zm400-160h160v-80H600v80Zm0 240v240h160v-240H600ZM200-280v80h160v-80H200Z"/></svg>
+	</a>
+	<a onclick="email_to_clip()" title="Copy email to contact">
 	<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#75FB4C"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v58q0 59-40.5 100.5T740-280q-35 0-66-15t-52-43q-29 29-65.5 43.5T480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480v58q0 26 17 44t43 18q26 0 43-18t17-44v-58q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h200v80H480Zm0-280q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"/></svg>
-
-
-  </a>
+	</a>	
+	
 </div>
-<div class="main" id="aio">
+
+<div class="_main" id="aio" >
 
 </div>
 <script>
@@ -46,11 +76,13 @@ function open_aio()
 	_html = "";
 
 	_id = "QDz9Bd";
-	_html = _html + '<img width="50%" xmlns="http://www.w3.org/2000/svg" src="./'+_id+'--.svg" id="'+_id+'" onclick = "open_svg(\''+_id+'\')" />';
+	_html = _html + '<img class="_tile"  xmlns="http://www.w3.org/2000/svg" src="./'+_id+'--.svg" id="'+_id+'" onclick = "open_svg(\''+_id+'\')" />';
 
 	_id = "QVz9Bd";
 //	_html = _html + '<img width="50%" xmlns="http://www.w3.org/2000/svg" src="./'+_id+'--.svg" id="'+_id+'" onclick = "open_svg(\''+_id+'\')" />';
-	_html = _html + '<img width="50%" xmlns="http://www.w3.org/2000/svg" src="./'+_id+'--.svg" id="'+_id+'"  />';
+	_html = _html + '<img class="_tile" xmlns="http://www.w3.org/2000/svg" src="./'+_id+'--.svg" id="'+_id+'"  />';
+//	_html = _html + '<img class="_tile" xmlns="http://www.w3.org/2000/svg" src="./'+_id+'--.svg" id="'+_id+'"  />';
+//	_html = _html + '<img class="_tile" xmlns="http://www.w3.org/2000/svg" src="./'+_id+'--.svg" id="'+_id+'"  />';
 
 	document.getElementById("aio").innerHTML = _html;
 	}
@@ -58,6 +90,34 @@ function open_svg(_id)
 	{
 	document.getElementById("aio").innerHTML = '<img width="100%" xmlns="http://www.w3.org/2000/svg" src="'+_id+'-.svg" />';
 	}
+async function email_to_clip()
+	{
+	_email = 'em~notorp 52kamuser';
+	_email = 'reems-unmoatko2r5p'.replace('-','.');
+
+	navigator.clipboard.writeText(_email.split("").map((item, index) => (index % 2 === 0) ? item : "").join("")+'@'+_email.split("").map((item, index) => (index % 2 != 0) ? item : "").reverse().join(""));
+	
+	const alertDiv = document.createElement('div');
+    alertDiv.textContent = 'Email copied to clipboard!';
+    alertDiv.style.cssText = `
+      position: fixed;
+      top: 5px;
+      right: 5px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      z-index: 9999;
+    `;
+    document.body.appendChild(alertDiv);
+
+    setTimeout(() => {
+      document.body.removeChild(alertDiv);
+    }, 1500);
+
+	
+	}
+
 </script>
 </body>
 </html>
